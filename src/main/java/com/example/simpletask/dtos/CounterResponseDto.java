@@ -5,22 +5,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CounterResponseDto implements ResponseDto {
 
   @JsonProperty("number_of_processed_files")
-  private Long numberOfProcessedFiles;
+  public final Long numberOfProcessedFiles;
 
   @JsonProperty("number_of_rows")
-  private Long numberOfRows;
+  public final Long numberOfRows;
 
   @JsonProperty("number_of_calls")
-  private Long numberOfCalls;
+  public final Long numberOfCalls;
 
   @JsonProperty("number_of_messages")
-  private Long numberOfMessages;
+  public final Long numberOfMessages;
 
   @JsonProperty("number_of_different_origin_country_codes")
-  private Long numberOfUniqueCountyCodes;
+  public final Long numberOfUniqueCountyCodes;
 
   @JsonProperty("number_of_different_destination_country_codes")
-  private Long getNumberOfUniqueDestinations;
+  public final Long getNumberOfUniqueDestinations;
 
   public CounterResponseDto(
       Long numberOfProcessedFiles,
@@ -36,4 +36,5 @@ public class CounterResponseDto implements ResponseDto {
     this.numberOfUniqueCountyCodes = numberOfUniqueCountyCodes;
     this.getNumberOfUniqueDestinations = getNumberOfUniqueDestinations;
   }
+
 }
